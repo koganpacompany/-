@@ -1,1 +1,35 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="平清盛"){
+alert("正解です。武家中心の世の中を作る立役者となった一人が平清盛です。また、日宋貿易のために瀬戸内海の航路を整えたこと、宋銭の輸入により貨幣経済を浸透させたことも清盛の功績です。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html"
+);
 
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg/800px-Taira_no_Kiyomori%2CTenshiSekkanMiei.jpg">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
