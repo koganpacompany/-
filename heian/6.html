@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="源頼朝"){
+alert("正解です。鎌倉幕府の初代将軍で、圧倒的なリーダーシップで源氏・東国御家人をひとつにまとめ上げ、「平家滅亡」を成し遂げました。また、政治の実権を朝廷から奪って、武家政権を確立しました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://i0.wp.com/kamakura-guide.jp/wp-content/uploads/2013/12/bb143e7ad92daaa62e95ed7879ba2355.jpg?resize=471%2C600&ssl=1">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
