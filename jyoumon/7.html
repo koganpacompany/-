@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="鑑真"){
+alert("正解です。日本に仏教の教えを正しく広めるため、海を渡ることを決意した唐の僧です。しかし、渡航は難航し失明してしまいましたが6度目の渡航で日本に来ました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"8.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO0397115015032021000000-1.jpg?ixlib=js-2.3.2&w=429&h=524&auto=format%2Ccompress&ch=Width%2CDPR&q=45&fit=crop&bg=FFFFFF&s=5518b0e73e61e87de255327880523e2f">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
