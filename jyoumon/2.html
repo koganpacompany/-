@@ -2,9 +2,9 @@
 <head>
 <script language="javaScript">
 function quiz(){
-answer=prompt("表示されている写真の都道府県はどこですか？\n※フルネームの漢字でお答えください。");
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
 if(answer=="聖徳太子"){
-alert("正解です。道庁所在地は、「札幌市中央区」です。");
+alert("正解です。飛鳥時代の政治家です。 推古天皇のもとで摂政として、十七条の憲法や冠位十二階の制定、遣隋使の派遣、法隆寺の建立、仏教の布教活動などのさまざまな功績を残しています。");
 }
 else{
 alert("不正解です。");
@@ -25,12 +25,12 @@ function myRndLink(){
   location.href = myTable[myRnd];
 }
 </script>
-<title>都道府県クイズ</title>
+<title>歴史人物クイズ</title>
 </head>
 <body>
-<font size="7">都道府県クイズ</font>
+<font size="7">歴史人物クイズ</font>
 <br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
-<img src="hokkaido.png" width="400" height="271">
+<img src="https://himiko.or.jp/makimuku/file/yhimiko.jpg" width="364" height="512">
 <form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
 <input type="button" value="次の問題へ"onclick="myRndLink()"></center>
 </body>
