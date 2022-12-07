@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="藤原道長"){
+alert("正解です。娘を入内させて天皇家の外戚になることで、摂政や関白の役職に就き、権力を握っている道長は、この手法を最大限に利用し、3人の娘を入内させて摂関政治の全盛時代を築きました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://history-land.com/wp-content/uploads/2016/06/390487d704a3d4015669c3636de85f55.jpg">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
