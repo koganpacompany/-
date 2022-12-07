@@ -1,1 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="中大兄皇子"){
+alert("正解です。 蘇我氏が専横を極めたために中臣鎌足らと蘇我氏を倒す計画を立て、645年、蘇我入鹿を殺し、蘇我蝦夷を自殺に追い込みました。 これが大化の改新の始まりです。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"6.html",
+	"7.html",
+	"8.html"
+);
 
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-13244140373?w=200&h=200&up=0">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
