@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="聖武天皇"){
+alert("正解です。国分寺と国分尼寺の総本山として奈良に東大寺をつくり、大仏をつくりました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Emperor_Shomu.jpg/1200px-Emperor_Shomu.jpg" width="300" height="477.25">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
