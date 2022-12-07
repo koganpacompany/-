@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="小野妹子"){
+alert("正解です。聖徳太子が隋と国交するにあたり、第1回遣隋使となり通訳鞍作福利を従えて渡海した人です。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html",
+	"8.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://storage.nana-music.com/picture/1830771-086a85c6-4104-42ac-980f-4465aaf9f668-large.png" width="400" height="400">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
