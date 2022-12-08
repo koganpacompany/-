@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="織田信長"){
+alert("正解です。家督争いの混乱を収めた後に、桶狭間の戦いで今川義元を討ち取り勢力を拡大しました。 足利義昭を奉じて上洛し、後には義昭を追放することで、畿内を中心に独自の「織田政権」を確立して天下人となった戦国時代を代表する英雄です。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+  "7.html",
+  "8.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://president.ismcdn.jp/mwimgs/9/b/450wm/img_9b2ac2c7bbb430236204132ad74100991018116.jpg">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body、
