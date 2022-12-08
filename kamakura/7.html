@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="織田信長"){
+alert("正解です。戦国時代～安土桃山時代の日本の武将、戦国大名で、織田信長の後を継いで天下を統一し、近世封建社会の基礎を築きました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+  "6.html",
+  "8.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://cdn-project.nikkeibp.co.jp/decom/atcl/102700008/011300005/ph01.jpg?__scale=w:750,h:420&_sh=0a00fc0d90">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body、
