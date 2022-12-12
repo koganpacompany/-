@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="板垣退助"){
+alert("正解です。明治政府に議会を開くことなどを求めた自由民権運動の指導者です。 ");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html",
+	"8.html",
+	"9.html",
+	"10.html",
+	"11.html",
+	"12.html",
+	"13.html",
+	"14.html",
+	"15.html",
+	"17.html",
+	"18.html",
+	"19.html",
+	"20.html",
+	"21.html",
+	"22.html",
+	"23.html",
+	"24.html",
+	"25.html",
+	"26.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Minamoto_no_Yoshitsune.jpg/1200px-Minamoto_no_Yoshitsune.jpg" width="600" height="718.5">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>

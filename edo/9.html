@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="歌川広重"){
+alert("正解です。江戸時代後期に活躍した浮世絵師です。 街道が整備され、文物の往来が盛んになる中で起こった旅行ブームに乗じ、東京と京都を結ぶ東海道の全ての宿駅を描いた55図の浮世絵シリーズ「東海道五十三次」が、空前の大ヒットしました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html",
+	"8.html",
+	"10.html",
+	"11.html",
+	"12.html",
+	"13.html",
+	"14.html",
+	"15.html",
+	"16.html",
+	"17.html",
+	"18.html",
+	"19.html",
+	"20.html",
+	"21.html",
+	"22.html",
+	"23.html",
+	"24.html",
+	"25.html",
+	"26.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Minamoto_no_Yoshitsune.jpg/1200px-Minamoto_no_Yoshitsune.jpg" width="600" height="718.5">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>

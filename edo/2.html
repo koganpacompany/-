@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="松尾芭蕉"){
+alert("正解です。江戸時代前期の俳諧師で、俳句を単なる言葉遊びの芸事から世界で最も短い詩として文学にまで高めました。");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"3.html",
+	"4.html",
+	"5.html",
+	"6.html",
+	"7.html",
+	"8.html",
+	"9.html",
+	"10.html",
+	"11.html",
+	"12.html",
+	"13.html",
+	"14.html",
+	"15.html",
+	"16.html",
+	"17.html",
+	"18.html",
+	"19.html",
+	"20.html",
+	"21.html",
+	"22.html",
+	"23.html",
+	"24.html",
+	"25.html",
+	"26.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://r-ijin.com/wp-content/uploads/2016/09/basyousa.jpg">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>

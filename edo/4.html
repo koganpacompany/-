@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language="javaScript">
+function quiz(){
+answer=prompt("表示されている写真の人物はどこですか？\n※フルネームの漢字でお答えください。");
+if(answer=="本居宣長"){
+alert("正解です。江戸時代の終わりに「国学」という学問を完成させた人物です。 三重県松阪市に、本居宣長が暮らした家が保存されています。 ");
+}
+else{
+alert("不正解です。");
+}
+}
+myTable = new Array(
+	"1.html",
+	"2.html",
+	"3.html",
+	"5.html",
+	"6.html",
+	"7.html",
+	"8.html",
+	"9.html",
+	"10.html",
+	"11.html",
+	"12.html",
+	"13.html",
+	"14.html",
+	"15.html",
+	"16.html",
+	"17.html",
+	"18.html",
+	"19.html",
+	"20.html",
+	"21.html",
+	"22.html",
+	"23.html",
+	"24.html",
+	"25.html",
+	"26.html"
+);
+
+function myRndLink(){
+  myRnd = Math.floor( Math.random() * myTable.length );
+  location.href = myTable[myRnd];
+}
+</script>
+<title>歴史人物クイズ</title>
+</head>
+<body>
+<font size="7">歴史人物クイズ</font>
+<br>クイズを開始するには下のクイズ開始ボタンを押してください。</br>
+<img src="https://www.norinagakinenkan.com/about_norinaga/img_n/syozou.jpg">
+<form><input type="button" name="ボタン" value="クイズ開始" onclick="quiz()"></form>
+<input type="button" value="次の問題へ"onclick="myRndLink()"></center>
+</body>
